@@ -17,11 +17,14 @@ Including another URLconf
 # from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
+from django.views.generic.base import RedirectView
 
 from app import admin
 from app.views import *
 urlpatterns = [
        # path('admin/', admin.site.urls),
+    path('', RedirectView.as_view(url='/login/')),
     path('code-auth/', generate_code_auth, name='generate_code_auth'),
+    path('register/', register_view, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='generator/login.html'), name='login'),
 ]

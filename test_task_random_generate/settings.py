@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/code-auth/'
 
+AUTH_USER_MODEL = 'auth.User'
+
 # Application definition
 
 INSTALLED_APPS = [
