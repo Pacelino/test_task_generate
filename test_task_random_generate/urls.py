@@ -25,6 +25,8 @@ urlpatterns = [
        # path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/login/')),
     path('code-auth/', generate_code_auth, name='generate_code_auth'),
+    path('generate-code/', generate_code, name='generate_code'),
     path('register/', register_view, name='register'),
+
     path('login/', auth_views.LoginView.as_view(template_name='generator/login.html'), name='login'),
 ]

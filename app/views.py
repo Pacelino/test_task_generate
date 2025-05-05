@@ -24,3 +24,9 @@ def generate_code_auth(request):
     code = random.randint(1000, 9999)
     logout(request)
     return render(request, 'generator/code_auth.html', {'code': code})
+
+
+def generate_code(request):
+    code = random.randint(1000, 9999)
+    logout(request)
+    return render(request, 'generator/code_auth.html', {'code': code})
